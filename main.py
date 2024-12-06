@@ -3,6 +3,9 @@ import sys
 import logging
 from bot_logic.bot import cmd_start
 from bot_logic.loader import dp, bot
+from config.config import load_config
+
+config = load_config('.env')
 
 async def main() -> None:
     dp.message.register(cmd_start)
